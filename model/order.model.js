@@ -1,8 +1,8 @@
 import { Schema, model, Types } from "mongoose";
 
 const orderSchema = new Schema({
-  client: [{ type: Schema.Types.ObjectId, ref: "Client" }],
-  product: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  client: { type: Types.ObjectId, ref: "Client" },
+  product: [{ type: Types.ObjectId, ref: "Product" }],
   unities: { type: Number, required: true },
   typePayment: { type: String, required: true },
   statusPayment: { type: String, required: true },

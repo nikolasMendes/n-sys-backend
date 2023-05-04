@@ -8,7 +8,7 @@ const clientSchema = new Schema({
   district: { type: String, required: true },
   city: { type: String, required: true },
   cellphone: { type: String, required: true },
-  order: [{ type: Schema.Types.ObjectId, ref: "Order" }],
+  order: [{ type: Types.ObjectId, ref: "Order" }],
 });
 
 export const clientModel = model("Client", clientSchema);

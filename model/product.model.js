@@ -9,6 +9,7 @@ const productSchema = new Schema({
   winery: { type: String, required: true },
   grape: { type: String, required: true },
   image: { type: String, required: true },
+  order: [{ type: Types.ObjectId, ref: "Order" }],
 });
 
 export const productModel = model("Product", productSchema);
